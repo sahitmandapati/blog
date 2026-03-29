@@ -1,0 +1,370 @@
+// Intro section
+.intro {
+  margin-bottom: 0;
+
+  h1 {
+    margin-top: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    margin-bottom: 0.4em;
+    color: $white;
+  }
+
+  p {
+    font-size: 1.05rem;
+    color: $mid;
+    margin-bottom: 0.5em;
+
+    a {
+      color: $text;
+      border-bottom: 1px solid $border;
+      transition: border-color 0.2s ease;
+      &:hover { border-color: $white; }
+    }
+  }
+
+  .social {
+    font-size: 0.8rem;
+    color: $light;
+    margin-bottom: 0;
+
+    a {
+      color: $mid;
+      border-bottom: 1px dashed $border;
+      padding-bottom: 1px;
+      transition: all 0.2s ease;
+      &:hover { color: $white; border-color: $white; }
+    }
+  }
+}
+
+// Section label style
+.section-label {
+  margin-top: 0;
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: $light;
+  margin-bottom: 0.75rem;
+}
+
+// Essay list (used in Recent & Top Essays)
+.essay-list {
+  list-style: none;
+  padding: 0;
+
+  li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid $border;
+    margin-bottom: 0;
+    transition: background 0.2s ease, padding-left 0.2s ease;
+
+    &:hover {
+      padding-left: 0.5rem;
+      background: rgba(255,255,255,0.02);
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $text;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  .meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    color: $light;
+    margin-top: 0.25rem;
+  }
+
+  .views-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: $mid;
+    font-size: 0.7rem;
+    background: $surface;
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    border: 1px solid $border;
+  }
+}
+
+// Top essays (view-tracked)
+.top-essays {
+  margin-bottom: 0;
+
+  h2 {
+    @extend .section-label;
+  }
+}
+
+// Recent essays
+.recent {
+  margin-bottom: 0;
+
+  h2 {
+    @extend .section-label;
+  }
+}
+
+// Archive
+.archive {
+  h2 {
+    @extend .section-label;
+    margin-bottom: 1rem;
+  }
+}
+
+.year-nav {
+  margin-bottom: 1.5rem;
+  font-size: 0.8rem;
+  color: $light;
+  line-height: 2;
+
+  a {
+    color: $light;
+    text-decoration: none;
+    padding: 0.2em 0.5em;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: $white;
+      background: $surface;
+    }
+  }
+}
+
+.year-group {
+  margin-bottom: 2rem;
+
+  h3 {
+    margin-top: 0;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: $white;
+    margin-bottom: 0.6rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid $border;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  li {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    padding: 0.45rem 0;
+    border-bottom: 1px solid transparent;
+    transition: all 0.2s ease;
+
+    &:hover {
+      border-color: $border;
+      padding-left: 0.4rem;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $text;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  .cats {
+    color: $light;
+    font-size: 0.7rem;
+    margin-left: 0.3rem;
+  }
+}
+
+// Single post
+.post-header {
+  margin-bottom: 2.5rem;
+
+  h1 {
+    margin-top: 0;
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.04em;
+    margin-bottom: 0.3em;
+    color: $white;
+  }
+}
+
+.post-meta {
+  color: $light;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.view-count {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.75rem;
+  color: $mid;
+  background: $surface;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid $border;
+}
+
+.post-content {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: $text;
+
+  h2 {
+    margin-top: 2.5em;
+    color: $white;
+  }
+
+  h2:first-child {
+    margin-top: 0;
+  }
+
+  strong {
+    font-weight: 600;
+    color: $white;
+  }
+
+  a {
+    color: $text;
+    text-decoration: underline;
+    text-decoration-color: $border;
+    text-underline-offset: 3px;
+    transition: text-decoration-color 0.2s ease;
+
+    &:hover {
+      text-decoration-color: $white;
+    }
+  }
+}
+
+.post-footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid $border;
+}
+
+.post-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+
+  a {
+    color: $mid;
+    text-decoration: none;
+    max-width: 48%;
+    transition: all 0.2s ease;
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    border: 1px solid $border;
+
+    &:hover {
+      color: $white;
+      border-color: $mid;
+      background: $surface;
+    }
+  }
+
+  .nav-next {
+    margin-left: auto;
+    text-align: right;
+  }
+}
+
+.back-link {
+  font-size: 0.8rem;
+  color: $light;
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $white;
+  }
+}
+
+// Page
+.page {
+  h1 {
+    margin-top: 0;
+    letter-spacing: -0.04em;
+    color: $white;
+  }
+
+  a {
+    color: $text;
+    border-bottom: 1px solid $border;
+    transition: border-color 0.2s ease;
+
+    &:hover {
+      border-color: $white;
+    }
+  }
+}
+
+// Responsive extras
+@media (max-width: 768px) {
+  .intro h1 {
+    font-size: 2rem;
+  }
+
+  .post-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .post-nav {
+    flex-direction: column;
+
+    a {
+      max-width: 100%;
+    }
+  }
+
+  .essay-list li:hover {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro h1 {
+    font-size: 1.6rem;
+  }
+
+  .post-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .post-content {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,21 @@
+// Syntax highlighting — dark
+.highlight {
+  background: $surface;
+  border-radius: 8px;
+  margin-bottom: 1.25em;
+  border: 1px solid $border;
+
+  pre {
+    margin: 0;
+    border: none;
+  }
+
+  .c, .cm, .c1, .cs { color: $light; font-style: italic; }
+  .k, .kd, .kn, .kp, .kr, .kt { color: #c9d1d9; font-weight: 600; }
+  .s, .s1, .s2, .sb, .sc, .sd, .sh, .sx { color: #a5d6ff; }
+  .mi, .mf, .mh, .mo { color: #79c0ff; }
+  .na { color: #d2a8ff; }
+  .nb, .nc, .nf { color: #d2a8ff; }
+  .o, .ow { color: $text; }
+  .p { color: $text; }
+}

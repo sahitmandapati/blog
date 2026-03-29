@@ -1,0 +1,33 @@
+title: Sahit Mandapati
+description: truth seeker
+author: Sahit Mandapati
+url: ""
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+permalink: /:title/
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+
+# Collections defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
